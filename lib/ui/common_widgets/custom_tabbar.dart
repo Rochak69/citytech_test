@@ -106,13 +106,13 @@ class _CustomTabBarState extends State<CustomTabBar> {
                     : Column(
                         children: [
                           Text(
-                            tickets!.data!.dist!.month![index].label ??
+                            tickets.data!.dist!.month![index].label ??
                                 "No Data",
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 14.sp),
                           ),
                           Text(
-                            tickets!.data!.dist!.month![index].value ??
+                            tickets.data!.dist!.month![index].value ??
                                 "No Data",
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 14.sp),

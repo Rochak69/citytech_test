@@ -21,7 +21,7 @@ class TicketRepository {
     final Dio _dio = Dio();
 
     Response ticketsData = await _dio
-        .get(BaseUrl.baseUrl + Endpoints.getMyTickets + '/test@gmail.com');
+        .get('${BaseUrl.baseUrl}${Endpoints.getMyTickets}/test@gmail.com');
 
     print('User Info: ${ticketsData.data}');
 

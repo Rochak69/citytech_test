@@ -24,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   MyTickets? _myTickets;
 
+  @override
   void initState() {
     super.initState();
     _getTickets();
@@ -35,7 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {});
   }
 
-  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,12 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
           child: Stack(
             children: [
-              FirstTabBar(tabItems: [
+              FirstTabBar(tabItems: const [
                 'Home',
                 'Tickets'
               ], tabViews: [
                 CustomTabBar(
-                  tabItems: ['Day', 'Week', 'Month', 'Year'],
+                  tabItems: const ['Day', 'Week', 'Month', 'Year'],
                   tabViews: [
                     _buildGridView(0),
                     _buildGridView(1),
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 CustomTabBar(
-                  tabItems: ['Day', 'Week', 'Month', 'Year'],
+                  tabItems: const ['Day', 'Week', 'Month', 'Year'],
                   tabViews: [
                     _buildBarGraph(),
                     _buildBarGraph(),

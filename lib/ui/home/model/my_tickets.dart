@@ -12,7 +12,7 @@ class MyTickets {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['code'] = code;
     data['message'] = message;
     if (this.data != null) {
@@ -32,7 +32,7 @@ class Data {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (dist != null) {
       data['dist'] = dist!.toJson();
     }
@@ -76,7 +76,7 @@ class Dist {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (day != null) {
       data['day'] = day!.map((v) => v.toJson()).toList();
     }
@@ -105,7 +105,7 @@ class Day {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['label'] = label;
     data['value'] = value;
     return data;
@@ -124,7 +124,7 @@ class Month {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['label'] = label;
     data['value'] = value;
     return data;
@@ -143,7 +143,7 @@ class Week {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['label'] = label;
     data['value'] = value;
     return data;
@@ -162,7 +162,7 @@ class Year {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['label'] = label;
     data['value'] = value;
     return data;
